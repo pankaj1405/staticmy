@@ -17,7 +17,7 @@ steps:
   
 - task: CopyPublishBuildArtifacts@1
   inputs:
-    Contents: '"**"'
+    Contents: '**'
     ArtifactName: 'html'
     ArtifactType: 'Container'
 - task: AzureStaticWebApp@0
