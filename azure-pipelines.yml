@@ -14,7 +14,15 @@ steps:
   inputs:
     rootFolderOrFile: '$(build.sourcesDirectory)'
     includeRootFolder: false
+  
+- task: CopyPublishBuildArtifacts@1
+  inputs:
+    Contents: '"**"'
+    ArtifactName: 'html'
+    ArtifactType: 'Container'
 - task: AzureStaticWebApp@0
   inputs:
     app_location: '$(build.sourcesDirectory)'
+    output_location: '$(build.sourcesDirectory)'
+    deployment_environment: Production
     azure_static_web_apps_api_token: $(deployment_token)
