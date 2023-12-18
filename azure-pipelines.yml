@@ -25,4 +25,4 @@ steps:
     app_location: '$(build.sourcesDirectory)'
     output_location: '$(build.sourcesDirectory)'
     deployment_environment: Production
-    azure_static_web_apps_api_token: $(deployment_token)
+    azure_static_web_apps_api_token: $(deployement_token)
