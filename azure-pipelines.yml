@@ -22,7 +22,5 @@ steps:
     ArtifactType: 'Container'
 - task: AzureStaticWebApp@0
   inputs:
-    app_location: '$(build.sourcesDirectory)'
-    output_location: '$(build.sourcesDirectory)'
-    deployment_environment: Production
+    app_location: '/'
     azure_static_web_apps_api_token: $(deployement_token)
