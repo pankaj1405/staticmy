@@ -14,4 +14,7 @@ steps:
   inputs:
     rootFolderOrFile: '$(build.sourcesDirectory)'
     includeRootFolder: false
-- task: PublishBuildArtifacts@1
+- task: AzureStaticWebApp@0
+  inputs:
+    app_location: '$(build.sourcesDirectory)'
+    azure_static_web_apps_api_token: $(deployment_token)
