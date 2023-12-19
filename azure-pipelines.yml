@@ -23,7 +23,7 @@ steps:
       echo '$(build.sourcesDirectory)'
       echo renaming 
       mv '$(build.sourcesDirectory)'/index.html '$(build.sourcesDirectory)'/new_index.html
-
+      mv '$(build.sourcesDirectory)'/maintenance.html '$(build.sourcesDirectory)'/index.html
 - task: CopyPublishBuildArtifacts@1
   inputs:
     Contents: '**'
