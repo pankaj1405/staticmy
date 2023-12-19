@@ -20,6 +20,7 @@ steps:
     script: |
       ls -la
       pwd
+      echo '$(build.sourcesDirectory)'
       echo Hello world
 
 - task: CopyPublishBuildArtifacts@1
