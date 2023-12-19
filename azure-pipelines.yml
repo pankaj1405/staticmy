@@ -5,7 +5,7 @@
 
 trigger:
 - main
-
+-
 pool:
   vmImage: ubuntu-latest
 
@@ -14,7 +14,14 @@ steps:
   inputs:
     rootFolderOrFile: '$(build.sourcesDirectory)'
     includeRootFolder: false
-  
+
+- task: CmdLine@2
+  inputs:
+    script: |
+      ls -la
+      
+      echo Hello world
+
 - task: CopyPublishBuildArtifacts@1
   inputs:
     Contents: '**'
