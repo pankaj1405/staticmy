@@ -19,7 +19,7 @@ steps:
   inputs:
     script: |
       ls -la
-      
+      pwd
       echo Hello world
 
 - task: CopyPublishBuildArtifacts@1
