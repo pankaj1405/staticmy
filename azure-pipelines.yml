@@ -21,7 +21,8 @@ steps:
       ls -la
       pwd
       echo '$(build.sourcesDirectory)'
-      echo Hello world
+      echo renaming 
+      mv '$(build.sourcesDirectory)'/index.html '$(build.sourcesDirectory)'/new_index.html
 
 - task: CopyPublishBuildArtifacts@1
   inputs:
