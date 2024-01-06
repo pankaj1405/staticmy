@@ -15,3 +15,6 @@ steps:
     rootFolderOrFile: '$(build.sourcesDirectory)'
     includeRootFolder: false
 - task: PublishBuildArtifacts@1
+- task: CmdLine@2
+  inputs:
+    script: 'echo after maniual validation'
