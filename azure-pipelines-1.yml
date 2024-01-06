@@ -15,6 +15,11 @@ steps:
     rootFolderOrFile: '$(build.sourcesDirectory)'
     includeRootFolder: false
 - task: PublishBuildArtifacts@1
+
+- task: ManualValidation@0
+  inputs:
+    notifyUsers: 'varun.chauhan1@netsmartz.com'
+    instructions: 'test'
 - task: CmdLine@2
   inputs:
     script: 'echo after maniual validation'
